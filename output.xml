@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170216 17:01:23.405" generator="Robot 3.0 (Python 2.7.12 on darwin)">
+<suite source="/Users/MUKKII/Documents/Programming/robotframework/searchGoogle3_Template.robot" id="s1" name="searchGoogle3 Template">
+<kw type="setup" name="Open browser google" library="search">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${BASEURL}</arg>
+</arguments>
+<msg timestamp="20170216 17:01:23.490" level="INFO">Opening browser 'firefox' to base url 'http://www.google.com'</msg>
+<status status="PASS" endtime="20170216 17:01:28.823" starttime="20170216 17:01:23.490"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:28.823" starttime="20170216 17:01:23.490"></status>
+</kw>
+<test id="s1-t1" name="Search Google Case 01">
+<kw type="setup" name="Go to google" library="search">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${BASEURL}</arg>
+</arguments>
+<msg timestamp="20170216 17:01:28.826" level="INFO">Opening url 'http://www.google.com'</msg>
+<status status="PASS" endtime="20170216 17:01:29.422" starttime="20170216 17:01:28.825"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:29.422" starttime="20170216 17:01:28.825"></status>
+</kw>
+<kw name="Search template">
+<arguments>
+<arg>robotframework</arg>
+<arg>robotframework.org</arg>
+</arguments>
+<kw name="Key input" library="search">
+<arguments>
+<arg>${keyword}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20170216 17:01:29.427" level="INFO">Typing text 'robotframework' into text field 'name=q'</msg>
+<status status="PASS" endtime="20170216 17:01:29.604" starttime="20170216 17:01:29.426"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:29.604" starttime="20170216 17:01:29.424"></status>
+</kw>
+<kw name="Press" library="search">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>btnG</arg>
+</arguments>
+<msg timestamp="20170216 17:01:29.605" level="INFO">Clicking button 'btnG'.</msg>
+<status status="PASS" endtime="20170216 17:01:29.724" starttime="20170216 17:01:29.604"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:29.724" starttime="20170216 17:01:29.604"></status>
+</kw>
+<kw name="Verify result" library="search">
+<arguments>
+<arg>${expected result}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${Expected}</arg>
+</arguments>
+<status status="PASS" endtime="20170216 17:01:30.515" starttime="20170216 17:01:29.725"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:30.516" starttime="20170216 17:01:29.724"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:30.516" starttime="20170216 17:01:29.423"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:30.516" critical="yes" starttime="20170216 17:01:28.823"></status>
+</test>
+<test id="s1-t2" name="Search Google Case 02">
+<kw type="setup" name="Go to google" library="search">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${BASEURL}</arg>
+</arguments>
+<msg timestamp="20170216 17:01:30.519" level="INFO">Opening url 'http://www.google.com'</msg>
+<status status="PASS" endtime="20170216 17:01:31.181" starttime="20170216 17:01:30.519"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:31.181" starttime="20170216 17:01:30.519"></status>
+</kw>
+<kw name="Search template">
+<arguments>
+<arg>atom</arg>
+<arg>atom</arg>
+</arguments>
+<kw name="Key input" library="search">
+<arguments>
+<arg>${keyword}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20170216 17:01:31.183" level="INFO">Typing text 'atom' into text field 'name=q'</msg>
+<status status="PASS" endtime="20170216 17:01:31.320" starttime="20170216 17:01:31.183"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:31.320" starttime="20170216 17:01:31.182"></status>
+</kw>
+<kw name="Press" library="search">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>btnG</arg>
+</arguments>
+<msg timestamp="20170216 17:01:31.321" level="INFO">Clicking button 'btnG'.</msg>
+<status status="PASS" endtime="20170216 17:01:31.401" starttime="20170216 17:01:31.321"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:31.401" starttime="20170216 17:01:31.320"></status>
+</kw>
+<kw name="Verify result" library="search">
+<arguments>
+<arg>${expected result}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${Expected}</arg>
+</arguments>
+<status status="PASS" endtime="20170216 17:01:31.416" starttime="20170216 17:01:31.402"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:31.417" starttime="20170216 17:01:31.401"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:31.417" starttime="20170216 17:01:31.181"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:31.417" critical="yes" starttime="20170216 17:01:30.518"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170216 17:01:31.493" starttime="20170216 17:01:31.419"></status>
+</kw>
+<status status="PASS" endtime="20170216 17:01:31.493" starttime="20170216 17:01:23.407"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="searchGoogle3 Template" pass="2">searchGoogle3 Template</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
